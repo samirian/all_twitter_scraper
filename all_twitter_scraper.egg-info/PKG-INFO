@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: all-twitter-scraper
+Version: 0.0.2
+Summary: Get all tweets filtered by the parameters that are in twitter advanced search.
+Home-page: https://github.com/samirian/all_twitter_scraper
+Author: Abdallah Samir
+Author-email: eng.abdallahsamir@gmail.com
+License: MIT
+Description: under development.
+Keywords: twitter tweets scraper
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
