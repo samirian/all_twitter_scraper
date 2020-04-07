@@ -17,8 +17,9 @@ class Twitter_Scraper:
 		self.__user_agent_rotator = User_Agent_Rotator()
 		self.__log_file = open(os.path.join('log', 'log.txt'), 'a', encoding='utf-8')
 
-	def scrap(self, criteria: Criteria, last_maximum_position=''):
+	def scrap(self, criteria: Criteria, last_maximum_position='', return_tweets_list=False):
 		tweets = []
+		counter = 0
 		maximum_position = last_maximum_position
 		output_file = open(str(criteria) + '.csv', 'w', encoding='utf-8', newline='')
 		csv_writer = csv.DictWriter(output_file, ['Tweet body', 'Date', 'Likes', 'Retweets', 'Tweet link', 'Twitter link'])
@@ -60,9 +61,11 @@ class Twitter_Scraper:
 					'Twitter link': 'https://twitter.com/' + new_tweet.get_username()
 				})
 				output_file.flush()
-			tweets.extend(new_tweets)
+			if return_tweets_list:
+				tweets.extend(new_tweets)
+			counter += len(new_tweets)
 			print('                                                                                ', end='\r')
-			print('Total scraped tweets :', len(tweets), end='\r')
+			print('Total scraped tweets :', counter, end='\r')
 			time.sleep(2)
 			maximum_position = min_position
 		print('\n')

@@ -77,7 +77,7 @@ class Criteria:
 		return search_url
 
 	def __str__(self):
-		return 'all_of_keywords [' + ' '.join(self.__all_of_keywords) + ']' + ' any_of_keywords [' + ' '.join(self.__any_of_keywords) + '] none_of_keywords [' + ' '.join(self.__none_of_keywords) + '] exact phrase ' + self.__exact_phrase + ' language ' + self.__language + ' since ' + self.__since_date.strftime('%Y-%m-%d') + ' until ' + self.__until_date.strftime('%Y-%m-%d')
+		return 'all_of_keywords [' + ' '.join(self.__all_of_keywords) + ']' + ' any_of_keywords [' + ' '.join(self.__any_of_keywords) + '] none_of_keywords [' + ' '.join(self.__none_of_keywords) + '] hashtags [' + ' '.join(self.__hashtags) + '] exact phrase ' + self.__exact_phrase + ' language ' + self.__language + ' since ' + self.__since_date.strftime('%Y-%m-%d') + ' until ' + self.__until_date.strftime('%Y-%m-%d')
 
 if __name__ == "__main__":
 	criteria = Criteria()
