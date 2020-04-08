@@ -1,6 +1,6 @@
-from modules.Twitter_Scraper import Twitter_Scraper
+from all_twitter_scraper.modules.Twitter_Scraper import Twitter_Scraper
 from datetime import date
-from modules.Criteria import Criteria
+from all_twitter_scraper.modules.Criteria import Criteria
 
 
 if __name__ == "__main__":

@@ -17,9 +17,9 @@ pip install all_twitter_scraper
 ## Usage
 An example that clears most of the package parameters:
 ```python
-from all_twitter_scraper.Twitter_Scraper import Twitter_Scraper
+from all_twitter_scraper.modules.Twitter_Scraper import Twitter_Scraper
 from datetime import date
-from all_twitter_scraper.Criteria import Criteria
+from all_twitter_scraper.modules.Criteria import Criteria
 
 
 if __name__ == "__main__":
