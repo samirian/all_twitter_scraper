@@ -15,6 +15,8 @@ from .helpers import User_Agent_Rotator
 class Twitter_Scraper:
 	def __init__(self):
 		self.__user_agent_rotator = User_Agent_Rotator()
+		if not os.path.exists('log'):
+			os.mkdir('log')
 		self.__log_file = open(os.path.join('log', 'log.txt'), 'a', encoding='utf-8')
 
 	def scrap(self, criteria: Criteria, last_maximum_position='', return_tweets_list=False):

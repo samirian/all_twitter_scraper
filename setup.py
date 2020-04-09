@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="all_twitter_scraper",
-    version="0.0.2",
+    version="0.0.4",
     author="Abdallah Samir",
     author_email="eng.abdallahsamir@gmail.com",
     license='MIT',
